@@ -239,7 +239,7 @@ public class UIManager : MonoBehaviour
 
     TextTween = DOTween.To(() => initAmount, (val) => initAmount = val, amount, 1f).OnUpdate(() =>
     {
-      if (megawin_text) megawin_text.text = initAmount.ToString("f2");
+      if (megawin_text) megawin_text.text = initAmount.ToString("f3");
     });
 
     WinTween = DOVirtual.DelayedCall(3.5f, () =>
