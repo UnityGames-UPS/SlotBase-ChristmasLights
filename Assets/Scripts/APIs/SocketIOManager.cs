@@ -372,6 +372,7 @@ public class SocketIOManager : MonoBehaviour
         Debug.Log(jsonObject);
         Root myData = JsonConvert.DeserializeObject<Root>(jsonObject);
 
+        PlayerData = myData.player;
         string id = myData.id;
 
         switch (id)
@@ -380,7 +381,7 @@ public class SocketIOManager : MonoBehaviour
                 {
                     InitialData = myData.gameData;
                     UIData = myData.uiData;
-                    PlayerData = myData.player;
+                    // PlayerData = myData.player;
                     // bonusdata = myData.message.BonusData;
 
                     if (!SetInit)
